@@ -29,7 +29,7 @@
             buildInputs = [
               bacon
               # build target: https://ryochack.hatenablog.com/entry/2017/10/22/014735
-              (rust-bin.stable.latest.default.override { extensions = [ "rust-src" ]; targets = [ "x86_64-unknown-linux-gnu" "86_64-pc-windows-msvc" ] })
+              (rust-bin.stable.latest.default.override { extensions = [ "rust-src" ]; targets = [ "x86_64-unknown-linux-gnu" "86_64-pc-windows-msvc" ]; })
               sea-orm-cli
             ];
             RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
