@@ -2,21 +2,21 @@ import cv2
 
 def normal():
     # Load (画像読み込み)
-    image_path = '../data/normal/sample.png'
+    image_path = './data/normal/sample.png'
     image = cv2.imread(image_path)
 
     # Grayscale (グレースケール化)
     grayscale = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    cv2.imwrite('../data/normal/grayscale.jpg', grayscale)
+    cv2.imwrite('./data/normal/grayscale.jpg', grayscale)
 
     # Remove noise using Gaussian blur (ノイズ除去)
     # noise = cv2.GaussianBlur(grayscale, (5, 5), 0)
-    # cv2.imwrite('../data/normal/noise.jpg', noise)
+    # cv2.imwrite('./data/normal/noise.jpg', noise)
 
     # Threshold (二値化)
     # 参考サイト: https://qiita.com/tokkuri/items/ad5e858cbff8159829e9
     _, threshold = cv2.threshold(grayscale, 110, 255, cv2.THRESH_BINARY)
-    cv2.imwrite('../data/normal/threshold.jpg', threshold)
+    cv2.imwrite('./data/normal/threshold.jpg', threshold)
 
     # Find contours (輪郭抽出)
     # 参考サイト: https://www.codevace.com/py-opencv-findcontours/
@@ -24,7 +24,7 @@ def normal():
     # Draw contours (輪郭描画)
     contours_image = image.copy()
     cv2.drawContours(contours_image, contours, -1, color=(0, 255, 0), thickness=2)
-    cv2.imwrite('../data/normal/contours.jpg', image)
+    cv2.imwrite('./data/normal/contours.jpg', image)
 
     # Draw rectangle (短形描画)
     # 参考サイト: https://qiita.com/neriai/items/448a36992e308f4cabe2
@@ -49,4 +49,4 @@ def normal():
     print(f"Detected {detect_count} rectangles.")
 
     # Save
-    cv2.imwrite('../data/normal/result.jpg', image)
+    cv2.imwrite('./data/normal/result.jpg', image)
