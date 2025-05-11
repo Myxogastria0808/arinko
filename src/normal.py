@@ -28,6 +28,7 @@ def normal():
 
     # Draw rectangle (短形描画)
     # 参考サイト: https://qiita.com/neriai/items/448a36992e308f4cabe2
+    # 参考サイト: https://qiita.com/neriai/items/448a36992e308f4cabe2
     # rectangle quantity
     detect_count = 0
     # process each contour

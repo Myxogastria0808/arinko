@@ -18,7 +18,6 @@ def red():
     cv2.imwrite('../data/red/threshold.jpg', threshold)
 
     # Find contours (輪郭抽出)
-    # 参考サイト: https://www.codevace.com/py-opencv-findcontours/
     contours, hierarchy = cv2.findContours(threshold, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
     # Draw contours (輪郭描画)
     contours_image = image
@@ -33,7 +32,6 @@ def red():
         # Get contour area
         area = cv2.contourArea(contour)
         # Remove noise
-        # 参考サイト: https://nanjamonja.net/archives/171
         if area < 1e2 or 4e3 < area:
             continue
         detect_count += 1
