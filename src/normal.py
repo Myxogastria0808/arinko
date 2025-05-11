@@ -20,9 +20,9 @@ def normal():
 
     # Find contours (輪郭抽出)
     # 参考サイト: https://www.codevace.com/py-opencv-findcontours/
-    contours, hierarchy = cv2.findContours(threshold, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+    contours, _ = cv2.findContours(threshold, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
     # Draw contours (輪郭描画)
-    contours_image = image
+    contours_image = image.copy()
     cv2.drawContours(contours_image, contours, -1, color=(0, 255, 0), thickness=2)
     cv2.imwrite('../data/normal/contours.jpg', image)
 
