@@ -1,2 +1,5 @@
 # Nix
 /.direnv
+
+# Python
+/src/__pycache__
