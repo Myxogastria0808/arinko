@@ -16,7 +16,8 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             python312Full
-            python311Packages.opencv4
+            python312Packages.opencv4
+            opencv4
           ];
         };
       }
