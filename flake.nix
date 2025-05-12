@@ -17,6 +17,7 @@
           packages = with pkgs; [
             python312Full
             python312Packages.opencv4
+            python312Packages.numpy
             opencv4
           ];
         };

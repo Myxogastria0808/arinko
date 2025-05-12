@@ -22,7 +22,7 @@ def red():
     # Draw contours (輪郭描画)
     contours_image = image.copy()
     cv2.drawContours(contours_image, contours, -1, color=(0, 255, 0), thickness=2)
-    cv2.imwrite('./data/red/contours.jpg', image)
+    cv2.imwrite('./data/red/contours.jpg', contours_image)
 
     # Draw rectangle (短形描画)
     # rectangle quantity

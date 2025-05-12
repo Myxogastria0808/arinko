@@ -4,10 +4,10 @@ import sys
 
 def main():
     args = sys.argv
-    if args[1] == "--normal" or args[1] == "-n":
+    if args[1] == "--red" or args[1] == "-r":
         print("Red Image Processing")
         red()
-    if args[1] == "--red" or args[1] == "-r":
+    if args[1] == "--normal" or args[1] == "-n":
         print("Normal Image Processing")
         normal()
 
