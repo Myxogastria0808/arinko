@@ -17,7 +17,6 @@ def normal():
     trimming[800:1200, 600:1000] = 255
     trimming[1800:2200, 200:700] = 255
     trimming[2900:3300, 600:1000] = 255
-
     cv2.imwrite('./data/normal/mask.jpg', trimming)
 
     # Grayscale (グレースケール化)
