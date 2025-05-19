@@ -47,7 +47,7 @@ def red(image_path, output_path):
         # Remove noise
         # 参考サイト: https://nanjamonja.net/archives/171
         # Draw rectangle
-        if 1e2 < area < 4e3:
+        if 150 < area < 4e3:
             # Ignore small and large area
             cv2.rectangle(trimming, (x, y), (x + w, y + h), (0, 255, 0), 2)
             # count rectangle
