@@ -66,8 +66,8 @@ def red(image_path, output_path):
     height, width = threshold.shape
     div_total_ant_count = 0
     # Divide the image into 15 parts
-    for div_width in range(0, 2, 1):
-        for div_height in range(0, 4, 1):
+    for div_width in range(0, 3, 1):
+        for div_height in range(0, 5, 1):
             divided_trimming = trimming[height // 5 * div_height : height // 5 * (div_height + 1),  width // 3 * div_width : width // 3 *  (div_width + 1)]
             divided_threshold = threshold[height // 5 * div_height : height // 5 * (div_height + 1),  width // 3 * div_width : width // 3 *  (div_width + 1)]
             # Find contours (輪郭抽出)
@@ -94,16 +94,11 @@ def red(image_path, output_path):
                 # Remove noise
                 # 参考サイト: https://nanjamonja.net/archives/171
                 # Draw rectangle
-                # if 150 < area < 4e3:
-                #     # Ignore small and large area
-                #     cv2.rectangle(trimming, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                #     # count rectangle
-                #     ant_count += 1
-                # Ignore small and large area
-                cv2.rectangle(trimming, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                # count rectangle
-                ant_count += 1
-            
+                if 150 < area < 4e3:
+                    # Ignore small and large area
+                    cv2.rectangle(trimming, (x, y), (x + w, y + h), (0, 255, 0), 2)
+                    # count rectangle
+                    div_ant_count += 1
             # Add to div total ant count
             div_total_ant_count += div_ant_count
             # Show total ant quantity
