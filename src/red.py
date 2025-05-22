@@ -19,10 +19,6 @@ def red(image_path, output_path):
     # Grayscale (グレースケール化)
     grayscale = cv2.cvtColor(trimming, cv2.COLOR_BGR2GRAY)
 
-    # # Remove noise using Gaussian blur (ノイズ除去)
-    # noise = cv2.GaussianBlur(grayscale, (5, 5), 0)
-    # cv2.imwrite('./data/red/noise.jpg', noise)
-
     # Threshold (二値化)
     _, threshold = cv2.threshold(grayscale, 50, 255, cv2.THRESH_BINARY)
 
@@ -103,5 +99,6 @@ def red(image_path, output_path):
             div_total_ant_count += div_ant_count
             # Show total ant quantity
             print(f"height: {div_height}, width: {div_width}, each ant quantity: {div_ant_count}.")
+
     # Show div total ant quantity
     print(f"image_path: {image_path}, div total ant quantity: {div_total_ant_count}, diff: {div_total_ant_count - ant_count}.")
