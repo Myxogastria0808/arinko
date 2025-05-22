@@ -6,6 +6,9 @@
 
 ### 0. 依存packageのinstall
 
+> [!IMPORTANT]
+> `python3.12`と`pip`がinstallされている必要があります。
+
 ```sh
 pip install -r requirements.txt
 ```
