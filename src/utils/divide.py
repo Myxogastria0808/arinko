@@ -8,6 +8,8 @@ def divide_process(image_path, output_path, smallest_area, largest_area):
     
     # Initialize total ant count
     div_total_ant_count = 0
+    # Initialize div ant counts
+    div_ant_counts = []
     # Get height and width
     height, width = threshold.shape
     # Divide the image into 15 parts
@@ -44,9 +46,11 @@ def divide_process(image_path, output_path, smallest_area, largest_area):
                     cv2.rectangle(trimming, (x, y), (x + w, y + h), (0, 255, 0), 2)
                     # Count rectangle
                     div_ant_count += 1
+            # Append div ant count
+            div_ant_counts.append(div_ant_count)
             # Add to div total ant count
             div_total_ant_count += div_ant_count
             # Show total ant quantity
             print(f"height: {div_height}, width: {div_width}, each ant quantity: {div_ant_count}.")
     
-    return div_total_ant_count
+    return div_total_ant_count, div_ant_counts

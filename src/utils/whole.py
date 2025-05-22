@@ -18,7 +18,7 @@ def whole_process(image_path, output_path, smallest_area, largest_area):
     # 参考サイト: https://qiita.com/neriai/items/448a36992e308f4cabe2
     # 参考サイト: https://qiita.com/neriai/items/448a36992e308f4cabe2
     # rectangle quantity
-    ant_count = 0
+    total_ant_count = 0
     
     # Process each contour
     for contour in contours:
@@ -33,7 +33,7 @@ def whole_process(image_path, output_path, smallest_area, largest_area):
             # Ignore small and large area
             cv2.rectangle(trimming, (x, y), (x + w, y + h), (0, 255, 0), 2)
             # Count rectangle
-            ant_count += 1
+            total_ant_count += 1
         # Draw all rectangles
         cv2.rectangle(contours_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
     
@@ -41,4 +41,4 @@ def whole_process(image_path, output_path, smallest_area, largest_area):
     output_image_name = os.path.split(image_path)[1]
     cv2.imwrite(f'{output_path}/{output_image_name}', trimming)
     
-    return ant_count
+    return total_ant_count
