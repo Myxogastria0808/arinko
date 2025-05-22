@@ -1,5 +1,6 @@
 from utils.divide import divide_process
 from utils.whole import whole_process
+import os
 
 def count_ant(image_path, f, number, output_path, smallest_area, largest_area):
     print("-------------------------------------------")
@@ -9,7 +10,7 @@ def count_ant(image_path, f, number, output_path, smallest_area, largest_area):
     # Process divided image
     div_total_ant_count, div_ant_counts = divide_process(image_path, output_path, smallest_area, largest_area)
     # Write to csv file
-    f.write(f"{image_path},{number},{total_ant_count},{div_total_ant_count},{total_ant_count - div_total_ant_count}")
+    f.write(f"{os.path.basename(image_path)},{number},{total_ant_count},{div_total_ant_count},{total_ant_count - div_total_ant_count}")
     for div_ant_count in div_ant_counts:
         f.write(f",{div_ant_count}")
     f.write("\n")
