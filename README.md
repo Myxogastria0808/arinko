@@ -4,6 +4,12 @@
 
 ## 使い方
 
+### 0. 依存packageのinstall
+
+```sh
+pip install -r requirements.txt
+```
+
 ### 1. `data/normal/inputs/`配下と`data/red/inputs/`配下にそれぞれ画像を設置
 
 - `data/normal/inputs/` ... 通常の照明の画像
