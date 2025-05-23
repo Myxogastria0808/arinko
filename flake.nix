@@ -17,10 +17,11 @@
           packages = with pkgs; [
             python312Full
             python312Packages.pip
-            python312Packages.opencv4
+            python312Packages.opencv-python
             opencv4
           ];
         };
       }
     );
 }
+
