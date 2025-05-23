@@ -18,7 +18,7 @@ def main():
         print("Red Image Processing")
         # Create csv file
         with open(f"{RED_RESULT_PATH}/csv/red.csv", "w", encoding='utf-8') as f:
-            f.write("filename,number,総数,区画総数,総数と区画総数の差,区画1,区画2,区画3,区画4,区画5,区画6,区画7,区画8,区画9,区画10,区画11,区画12,区画13,区画14,区画15\n")
+            f.write("filename,number,total,total_area,diff_of_area,area1,area2,area3,area4,area5,area6,area7,area8,area9,area10,area11,area12,area13,area14,area15\n")
             # Get image paths
             image_paths = sorted(glob.glob(RED_IMAGE_PATH))
             for i, image_path in enumerate(image_paths):
@@ -28,8 +28,8 @@ def main():
     if args[1] == "--normal" or args[1] == "-n":
         print("Normal Image Processing")
         # Create csv file
-        with open(f"{NORMAL_RESULT_PATH}/csv/normal.csv", "w") as f:
-            f.write("filename,number,総数,区画総数,総数と区画総数の差,区画1,区画2,区画3,区画4,区画5,区画6,区画7,区画8,区画9,区画10,区画11,区画12,区画13,区画14,区画15\n")
+        with open(f"{NORMAL_RESULT_PATH}/csv/normal.csv", "w", encoding='utf-8') as f:
+            f.write("filename,number,total,total_area,diff_of_area,area1,area2,area3,area4,area5,area6,area7,area8,area9,area10,area11,area12,area13,area14,area15\n")
             # Get image paths
             image_paths = sorted(glob.glob(NORMAL_IMAGE_PATH))
             for i, image_path in enumerate(image_paths):
