@@ -86,3 +86,10 @@ python3 ./src/main.py --red
 - `data/red/result/` ... 赤い照明の処理後の画像
 - `data/red/result/divide/` ... 赤い照明の処理後の分割された画像
 - `data/red/result/csv/` ... 赤い照明のカウント結果のcsv
+
+
+## DeepWiki
+
+内容の正しさについては、確認していません。
+
+https://deepwiki.com/Myxogastria0808/arinko
