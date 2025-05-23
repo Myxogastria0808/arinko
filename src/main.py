@@ -4,8 +4,8 @@ import glob
 
 RED_IMAGE_PATH = './data/red/inputs/*.JPG'
 RED_RESULT_PATH = './data/red/result/'
-RED_SMALLEST_AREA = 150
-RED_LARGEST_AREA = 4e3
+RED_SMALLEST_AREA = 9e2
+RED_LARGEST_AREA = 5e3
 
 NORMAL_IMAGE_PATH = './data/normal/inputs/*.JPG'
 NORMAL_RESULT_PATH = './data/normal/result/'
