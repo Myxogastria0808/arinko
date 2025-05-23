@@ -32,6 +32,23 @@ or
 python3 ./src/main.py --normal
 ```
 
+> [!TIP]
+> Windowsの場合は以下を実行
+>
+> ```sh
+>
+> python3 ./src/main.py -n
+>
+> ```
+>
+> or
+>
+> ```sh
+>
+>python3 ./src/main.py --normal
+>
+> ```
+
 #### 赤い照明の画像の蟻のカウント
 
 ```sh
@@ -43,6 +60,23 @@ or
 ```sh
 python3 ./src/main.py --red
 ```
+
+> [!TIP]
+> Windowsの場合は以下を実行
+>
+> ```sh
+>
+> python3 ./src/main.py -r
+>
+> ```
+>
+> or
+>
+> ```sh
+>
+>python3 ./src/main.py --red
+>
+> ```
 
 ### 3. 結果の画像とcsvが出力される
 
