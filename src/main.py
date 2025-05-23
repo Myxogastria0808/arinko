@@ -17,7 +17,7 @@ def main():
     if args[1] == "--red" or args[1] == "-r":
         print("Red Image Processing")
         # Create csv file
-        with open(f"{RED_RESULT_PATH}/csv/red.csv", "w") as f:
+        with open(f"{RED_RESULT_PATH}/csv/red.csv", "w", encoding='utf-8') as f:
             f.write("filename,number,総数,区画総数,総数と区画総数の差,区画1,区画2,区画3,区画4,区画5,区画6,区画7,区画8,区画9,区画10,区画11,区画12,区画13,区画14,区画15\n")
             # Get image paths
             image_paths = sorted(glob.glob(RED_IMAGE_PATH))
