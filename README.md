@@ -37,7 +37,7 @@ python3 ./src/main.py --normal
 >
 > ```sh
 >
-> python3 ./src/main.py -n
+> python ./src/main.py -n
 >
 > ```
 >
@@ -45,7 +45,7 @@ python3 ./src/main.py --normal
 >
 > ```sh
 >
->python3 ./src/main.py --normal
+>python ./src/main.py --normal
 >
 > ```
 
@@ -66,7 +66,7 @@ python3 ./src/main.py --red
 >
 > ```sh
 >
-> python3 ./src/main.py -r
+> python ./src/main.py -r
 >
 > ```
 >
@@ -74,7 +74,7 @@ python3 ./src/main.py --red
 >
 > ```sh
 >
->python3 ./src/main.py --red
+>python ./src/main.py --red
 >
 > ```
 
